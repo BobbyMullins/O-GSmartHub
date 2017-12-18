@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" >
+      <meta name="viewport" content="width=device-width, height=device-height" >
+      <title>Results</title>
+      <link rel="stylesheet" href="/css/CoveoFullSearchNewDesign.css"/>
+      <link href="http://bainsight.com/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />    
+      <script src="/modules/O365/adal.js"></script> 
+      <script src="/js/CoveoJsSearch.js"></script>
+<!--      <script src="/js/templates/templatesNew.js"></script>   -->
+      <script src="JS/SWN_custom_template.js"></script> 
+      <script id="SPOAuth" src="/modules/O365/SPOAuth.js" data-tenant="baidemoenv.onmicrosoft.com" data-client-id="cc95a12d-9923-4426-83ed-113293693d47"  data-tenant-url="https://baidemoenv.sharepoint.com" data-rest-uri="/services/FederatorService.svc"></script>
+      <!-- Font Awesome (for icons) -->
+      <script src="https://use.fontawesome.com/2c6ac1fdb1.js"></script>
+      <!-- RibbonJS -->
+      <script src="/modules/Ribbon/ribbon.js"></script>
+      <!--Bootstrap CDN -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">     
+      <!-- Optional Bootstrap Theme -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">  
+      <link rel="stylesheet" href="/Legal/CSS/Legal.css"/>
+      <link rel="stylesheet" href="/modules/DemoCustom/custom.css"/> 
+      <link href="/modules/Ribbon/ribbon.css" rel="stylesheet"/>
+      <link rel='stylesheet' href='CSS/SWN-custom.css'>
+      <script src="/modules/DemoCustom/JS/CustomImages.js"></script>
+      <script>
+          function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                    name = name.replace(/[\[\]]/g, "\\$&");
+                    var regex = new RegExp("[?&#]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                    if (!results) return null;
+                    if (!results[2]) return '';
+                    return decodeURIComponent(results[2].replace(/\+/g, " "));
+                }
+
+          var spQuery = getParameterByName("k");
+          var currentQuery = getParameterByName("q", window.location.hash);
+          if(spQuery && !currentQuery) {
+            window.location.hash +="&q=" + spQuery;
+        }
+      </script>
+  </head>  
+  <body id="search" class="CoveoSearchInterface BAInsightCustom" data-enable-debug-info="true" data-auto-trigger-query="true" data-hide-until-first-query="false" data-enable-duplicate-filtering="true" data-enable-history="true" data-design="new">
+      <div class="CoveoSmartPreviews" data-sphost-url="https://baidemoenv.sharepoint.com/DemoSearch" data-app-permission-identifier="i:0i.t|ms.sp.ext|70b1a44b-3850-4a1b-9a79-df49c6dbad30@db979fa2-bc81-465f-acce-bea76449cb91"></div>
+      <div class="coveo-header-zone"> 
+          <div class='container-fluid'>
+              <div class='row'>
+                  <div class='col-lg-2 col-md-2'>
+                      <div class="coveo-logo-section">
+                          <div class="coveo-logo-column">
+                            <a href="#"><img class='img-responsive' src='Images/swn-records-logo.png'/></a>
+                          </div>
+                      </div><!-- logo section -->
+                  </div>
+                  <div class='col-lg-8 col-md-8'>
+                      <div class="coveo-search-section">     
+                          <div class="CoveoSettings"></div>
+                          <div class="CoveoSearchbox" data-placeholder="Search..." data-enable-omnibox="true" data-add-scoped-search="false" data-show-keep-refiners="true">
+                              <div class="CoveoTypeAhead" data-sources="43b7401d-1008-4e7c-9c6c-3f930e7d8bfd,Practice Areas;36b1aa0e-5899-423a-a0a8-68ff5a892880,Jurisdictions" data-refiner-limit = "2" data-refiners="@DisplayAuthor,Authors;@RefinableString101,Jurisdiction">
+                              </div>
+                          </div><!-- coveo search box -->
+                      </div><!-- coveo search section -->
+                  </div>
+                  <div class='col-lg-2 col-md-2'>
+                      <img id='iq_index' class='img-responsive' src='Images/iqindex%20logo.png'>
+                  </div>
+              </div><!-- row -->
+          </div><!-- container fluid -->
+      </div><!-- coveo header zone --> 
+      <div class='menu'></div>
+      <div class="coveo-main-section">    
+          <div class="coveo-results-column">       
+              <div class="CoveoBreadcrumb"></div>
+              <div class="CoveoShareQuery"></div>
+              <div class="CoveoExportToExcel"></div>
+              <div class="header-info">
+                  <div class="coveo-summary-section">
+                    <span class="CoveoQuerySummary"></span>
+                  </div>
+                  <div class="coveo-results-header">
+                      <div class="coveo-sort-section">
+                        <span class="CoveoSort" data-sort-criteria="relevancy" data-caption="Relevance"></span>  
+                        <span class="CoveoSort" data-sort-criteria="date descending,date ascending" data-caption="Date"></span>        
+                      </div>
+                      <div class="coveo-result-layout-section">
+                        <div class="CoveoResultLayout" data-render-as="dropdown" data-has-hover="true" data-background-color="customBackground" data-border-color="customBorder"></div>
+                      </div>
+                      <div class="CoveoResultsPerPage"></div>
+                      <div class="CoveoPager"></div>
+                  </div><!-- results header -->
+              <div class="CoveoErrorReport" data-show-detailed-error="false"></div>
+              </div><!-- header info -->
+              <div class="CoveoResultList" data-caption="List" data-layout="bailist" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-has-hover="true"></div>
+              <div class="CoveoResultList" data-caption="Card" data-layout="baicard" data-wait-animation="fade" data-auto-select-fields-to-include="true" data-has-hover="true"></div>
+              <div class="footer-zone">
+                  <div class="coveo-summary-section">
+                      <span class="CoveoQuerySummary"></span>
+                  </div>
+                  <div class="CoveoPager"></div>
+              </div><!-- footer zone -->
+          </div><!-- Coveo Results Column -->
+          <div class="sidebar">
+              <div class="coveo-facet-column">
+                  <div class="CoveoFacet" data-title="Incident Type" data-lookup-field="@ContentSource" data-field="@ContentSource"  data-enable-toggling-operator='true'></div>
+                  <div class="CoveoFacet" data-title="Incident Person Type" data-lookup-field="@RefinableString102" data-field="@RefinableString102"  data-enable-toggling-operator='true'></div>
+                  <div class="CoveoFacet" data-title="Active Status" data-lookup-field="@DisplayAuthor" data-field="@DisplayAuthor" data-enable-toggling-operator='true'></div>
+              </div><!-- coveo facet column -->
+          </div><!-- side bar -->
+    </div><!-- Coveo Main Section -->
+    <!-- Bootstrap jQuery Script -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>        
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+  </body>
+</html>

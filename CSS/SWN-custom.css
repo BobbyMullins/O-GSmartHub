@@ -1,0 +1,92 @@
+/* Ribbon Zone*/
+#ribbon-zone {
+    display: none; 
+}
+/*Coveo Header Zone*/
+.BAInsightCustom .coveo-header-zone {
+    background-color: #00a8e1; 
+    display: block; 
+    margin-left: 0; 
+    margin-right: 0; 
+}
+/*Coveo Search Section */
+.CoveoSearchInterface.BAInsightCustom .coveo-header-zone .coveo-search-section, .CoveoSearchInterface.BAInsightCustom .coveo-search-section {
+    margin: auto; 
+}
+.CoveoSearchInterface.BAInsightCustom .coveo-header-zone .coveo-search-section, .CoveoSearchInterface.BAInsightCustom .coveo-search-section {
+    margin: 30px 16.5% 2.5% 16.5%; 
+}
+.BAInsightCustom .coveo-logo-section {
+    margin-left: auto; 
+}
+.CoveoSearchInterface .coveo-search-section {
+    max-width: 66%;     
+    padding: 0; 
+}
+.CoveoScopedSearch {
+    border-right: 2px solid #00a8e1; 
+    height: 40px; 
+}
+.CoveoSearchbox .magic-box .magic-box-input {
+    border-radius: 0; 
+}
+.CoveoSearchInterface.BAInsightCustom .CoveoSearchbox .CoveoSearchButton {
+    border-left: 2px solid #00a8e1;
+    border-top-right-radius: 0; 
+    border-top-left-radius: 0; 
+    background-color: #fff;  
+}
+.CoveoSearchInterface.BAInsightCustom .CoveoSettings {
+    top: 0px; 
+    background-color: #fff; 
+    border-bottom: 2px solid #00a8e1;  
+    border-radius: 0; 
+}
+#iq_index {
+    margin-top: 30px; 
+}
+/*Menu Zone*/
+.menu {
+    background-color:#efefef; 
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08); 
+    height: 50px; 
+}
+.menu li a {
+    color: #4f4f4f;  
+}
+.menu li a:hover {
+    background-color: #00a8e1;  
+    color: #fff; 
+}
+/*Separator*/
+.CoveoSearchInterface.BAInsightCustom .separator, .CoveoSearchInterface.BAInsightCustom .coveo-facet-collapsed .separator {
+    background-color: #00a8e1;  
+}
+/*Main Results Section*/
+.CoveoSearchInterface.BAInsightCustom .CoveoSort.coveo-selected {
+    border-bottom-color: #00a8e1; 
+}
+/*Results Info*/
+.CoveoSearchInterface.BAInsightCustom .coveo-results-per-page-list-item, .CoveoSearchInterface.BAInsightCustom .coveo-pager-list-item  {
+    background-color: #fff; 
+    border: 2px solid #00a8e1; 
+    color: #00a8e1; 
+}
+.CoveoSearchInterface.BAInsightCustom .coveo-pager-list-item.coveo-active, .CoveoSearchInterface.BAInsightCustom .coveo-active.coveo-results-per-page-list-item, .CoveoSearchInterface.BAInsightCustom .coveo-active.coveo-results-per-page-list-item, .CoveoSearchInterface.BAInsightCustom .coveo-pager-list-item:hover, .CoveoSearchInterface.BAInsightCustom .coveo-results-per-page-list-item:hover, .CoveoSearchInterface.BAInsightCustom .coveo-results-per-page-list-item:hover  {
+    background-color: #00a8e1; 
+    border: 2px solid #00a8e1; 
+    color: #fff;
+}
+.CoveoSearchInterface.BAInsightCustom .coveo-pager-list .coveo-pager-next.coveo-pager-list-item, .BAInsightCustom .coveo-pager-list .coveo-pager-previous.coveo-pager-list-item {
+    border: none; 
+}
+/* Right Refiner Panel */
+.BAInsightCustom .coveo-facet-header-title {
+    overflow: visible; 
+}
+/* Results  Panel Expanded*/
+.expanded {
+    max-height: none; 
+}
+
+
